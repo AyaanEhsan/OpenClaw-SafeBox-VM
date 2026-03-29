@@ -1,6 +1,6 @@
 # OpenClaw-SafeBox-VM 🛡️
 
-A hardened, zero-trust Ubuntu environment purpose-built for secure OpenClaw experimentation on Apple Silicon.
+A hardened, zero-trust Ubuntu environment purpose-built for secure OpenClaw experimentation.
 
 ---
 
@@ -14,7 +14,7 @@ Giving an experimental AI full access to your filesystem or local network is a *
 
 We use **UTM** to build a strict, **6-layer isolation protocol** that ensures autonomous agents remain entirely contained.
 
-> An agent given full access to this Virtual Machine cannot read, write, or delete anything on your Mac — not through the filesystem, and not through the network.
+> An agent given full access to this Virtual Machine cannot read, write, or delete anything on your host machine — not through the filesystem, and not through the network.
 
 ---
 
@@ -28,15 +28,15 @@ We use **UTM** to build a strict, **6-layer isolation protocol** that ensures au
 
 ## 🔒 Security Overview
 
-This setup utilizes UTM's architecture to prioritize **strict isolation over host-sharing**, protecting your machine via:
+This setup utilizes UTM's architecture to prioritize **strict isolation over host-sharing**, protecting your system via:
 
 ### 🧱 Air-gapped Filesystem
 - Absolutely **no shared folders**
-- Your Mac's files are **invisible and untouchable**
+- Host machine files are **invisible and untouchable**
 
 ### 🌐 Emulated VLAN Network
 - Outbound internet access enabled
-- Your **local home network and host machine are completely isolated**
+- Your **local network and host system are completely isolated**
 
 ### 🔐 Internal Hardening
 - Pre-configured firewalls
@@ -51,9 +51,19 @@ This setup utilizes UTM's architecture to prioritize **strict isolation over hos
 
 ---
 
+## 📋 Prerequisites
+
+Before you start, make sure you have:
+
+1. **UTM** – Virtual machine hypervisor compatible with your host  
+
+2. **Ubuntu Server ARM64 ISO** – The OS for the VM  
+
+---
+
 ## 📥 Installation & Setup Guide
 
-For the complete, step-by-step setup instructions, please refer to the included **PDF document**.
+For the complete, step-by-step setup instructions, please refer to the **PDF document**.
 
 ### 📘 The guide covers:
 
